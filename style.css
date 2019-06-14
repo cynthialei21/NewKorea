@@ -1,0 +1,348 @@
+:root{
+--time-for-animations: all 1s;
+}
+
+html{
+	font-size: 62.5%; 
+	
+}
+.header{
+	height: 40vw;
+	color: white;
+	font-family: 'Fahkwang', sans-serif;
+	background-image: linear-gradient(
+		to right bottom,
+		rgba(232,203,192,0.8),
+		rgba(99,111,164,0.8)),
+	url(pic/shop.jpg);
+}
+
+.logo{
+	height: 5vw;
+	width: 5vw;
+		top: 6rem;
+	right: 6rem;
+}
+
+body{
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+	background-color:rgba(246, 246, 246, 1);
+}
+
+.main-title{
+	position: relative;
+	font-size: 8vw;
+	text-align: center;
+	letter-spacing: 3vw;
+}
+
+.btn{
+	font-family: 'Fahkwang', sans-serif;
+	color: white;
+	margin-left: 40%;
+	margin-right: 40%;
+	border-radius: 2vw;
+	font-size: 2vw;
+	background-color: rgba(69, 76, 165, 0.20);
+	padding: 1.2vw;
+}
+
+
+.flex-row{
+	display: flex;
+	justify-content: space-around;
+}
+
+.flex-column{
+	width: 50%;
+	margin-left: 1vw;
+	padding: 3vw;
+	height: 30vw;
+}
+
+.pictures-about{
+	width: 20vw;
+	height: 30vw;
+}
+
+.text-about{
+	font-family: 'Fahkwang', sans-serif;
+	font-size: 2rem;
+	height: 20vw; 
+}
+
+h2{
+	font-size: 2.5vw;
+}
+
+.cards{
+	height: 40vw;
+}
+
+.card{
+	height: 30vw;
+	display: flex;
+	justify-content: space-around;
+}
+
+.card-side{
+	height: 30vw;
+	width: 30%;
+	backface-visibility: hidden;
+
+}
+
+.front-1{
+background-image: linear-gradient(
+		to bottom,
+		rgba(251, 211, 233, 0.3),
+		rgba(187, 55, 125, 0.3)),
+	url(pic/flower-bridge.jpg);
+	position: absolute;
+	z-index: 1;
+	transition: var(--time-for-animations);
+}
+.back-1{
+	background-image: linear-gradient(
+		to top,
+		rgba(251, 211, 233, 0.3),
+		rgba(187, 55, 125, 0.3));
+	position: absolute;
+	z-index: 0;
+	transform: rotateY(-180deg);
+	transition: var(--time-for-animations);
+}
+.card-1:hover .front-1{
+	transform: rotateY(-180deg);
+}
+
+.card-1:hover .back-1{
+	transform: rotateY(0deg);
+}
+
+.front-2{
+		background-image: linear-gradient(
+		to bottom,
+		rgba(252, 234, 187, 0.5),
+		rgba(248, 181, 0, 0.5)),
+	url(pic/beach.jpg);
+	position: absolute;
+	z-index: 1;
+	transition: var(--time-for-animations);
+}
+
+.back-2{
+		background-image: linear-gradient(
+		to top,
+		rgba(252, 234, 187, 0.3),
+		rgba(248, 181, 0, 0.3));
+	position: absolute;
+	z-index: 0;
+	transform: rotateY(-180deg);
+	transition: var(--time-for-animations);
+}
+
+.card-2:hover .front-2{
+	transform: rotateY(-180deg);
+}
+
+.card-2:hover .back-2{
+	transform: rotateY(0deg);
+}
+.front-3{
+		background-image: linear-gradient(
+		to bottom,
+		rgba(142,158,171,0.5),
+		rgba(238,242,243,0.5)),
+	url(pic/winter.jpg);
+	position: absolute;
+	z-index: 1;
+	transition: var(--time-for-animations);
+}
+
+.back-3{
+	background-image: linear-gradient(
+		to bottom,
+		rgba(142,158,171,0.5),
+		rgba(238,242,243,0.5));
+	position: absolute;
+	z-index: 0;
+	transform: rotateY(-180deg);
+	transition: var(--time-for-animations);
+}
+
+.card-3:hover .front-3{
+	transform: rotateY(-180deg);
+}
+
+.card-3:hover .back-3{
+	transform: rotateY(0deg);
+}
+.text-on-card{
+	font-family: 'Playfair Display', serif;
+	position: absolute;
+	color: white;
+	font-size: 5rem;
+	text-shadow: 2px 2px black;
+}
+
+.card-title{
+	font-size: 3rem;
+	font-family: 'Playfair Display', serif;
+	
+}
+
+.info{
+	list-style: none;
+	font-size: 3rem;
+	border-bottom: solid white 2px;
+
+}
+
+.navigation-checkbox{
+	display: none;
+}
+
+.navigation-button{
+	background-color: white;
+	height: 7rem;
+	width:7rem;
+	border-radius: 50%;
+	position: fixed;
+	top: 6rem;
+	right: 6rem;
+	z-index: 2000;
+	box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+	text-align: center;
+	cursor: pointer;
+}
+
+.navigation-icon{
+	position:relative;
+	margin-top: 3.5rem;
+}
+
+.navigation-icon::before, .navigation-icon::after{
+	content: "";
+}
+
+.navigation-icon::before{
+	position: absolute;
+	top: -0.8rem;
+	left: 0;
+}
+
+.navigation-icon::after{
+	position: absolute;
+	top: 0.8rem;
+	left: 0;
+}
+
+.navigation-icon, .navigation-icon:before, .navigation-icon:after {
+	width: 3rem;
+	height: 2px;
+	background-color: #333;
+	display: inline-block;
+	transition: all .2s;
+}
+
+.navigation-button:hover .navigation-icon::before{
+	top:-1rem;
+}
+
+.navigation-button:hover .navigation-icon::after{
+	top: 1rem;
+}
+
+.navigation-checkbox:checked + .navigation-button .navigation-icon{
+	background-color: transparent;
+}
+
+.navigation-checkbox:checked + .navigation-button .navigation-icon::before{
+	transform: rotate(135deg);
+	top: 0;
+}
+
+.navigation-checkbox:checked + .navigation-button .navigation-icon::after{
+	transform: rotate(-135deg);
+	top: 0;
+}
+
+.navigation-list{
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	list-style: none;
+	text-align: center;
+	width: 100%;
+}
+
+.navigation-item{
+	transition: all 0.3s ease;
+}
+
+.navigation-nav{
+	height: 100rem; 
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1500;
+	opacity: 0;
+	display: none;
+	width: 0%;
+	transition: all .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navigation-background{
+	height: 6rem;
+	width: 6rem;
+	border-radius: 50%;
+	position: fixed;
+	top: 6.5rem;
+	right: 6.5rem;
+	background-image: radial-gradient(
+		rgba(211, 204, 227, 1) ,
+		rgba(233, 228, 240, 1));
+	z-index: 1000;
+	transition: transform .8s;
+}
+.navigation-link, .navigation-link:link, .navigation-link:visited{
+	display: inline-block;
+	font-size: 3rem;
+	font-weight: 300;
+	padding: 1rem 2rem; 
+	color: black; 
+	text-decoration: none; 
+	text-transform: uppercase;
+	background-color: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+	background-size: 240%;
+	transition: all .4s;
+}
+
+.navigation-link:hover, .navigation-link:active{
+	background-position: 100%;
+	color: rgba(41, 152, 255, 1);
+	transform: translateX(1rem);
+}
+
+
+.navigation-checkbox:checked~.navigation-background{
+	transform: scale(80);
+
+}
+
+.navigation-checkbox:checked~.navigation-nav{
+	opacity: 1;
+	width: 100%;
+	display:block;
+}
+
+.profile{
+	max-width: 25vw;
+	max-height: 25vw;
+	clip-path: circle(30%);
+	float: left;
+}
